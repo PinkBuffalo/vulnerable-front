@@ -1,7 +1,10 @@
-// http://emberjs.com/guides/models/using-the-store/
+DS.RESTAdapter.configure('plurals', { story: 'stories' });
 
-VulnerableFront.Store = DS.Store.extend({
-  // Override the default adapter with the `DS.ActiveModelAdapter` which
-  // is built to work nicely with the ActiveModel::Serializers gem.
-  adapter: '_ams'
+Vuln.ApplicationAdapter = DS.RESTAdapter.extend({
+  namespace: 'api/v1',
+  url: 'http://localhost:4000'
+});
+
+Vuln.Store = DS.Store.extend({
+  adapter: 'Vuln.ApplicationAdapter'
 });

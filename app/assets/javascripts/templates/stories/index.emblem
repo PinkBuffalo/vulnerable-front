@@ -1,0 +1,5 @@
+h2 Timeline
+
+ul
+  each story in model
+    li= story.body

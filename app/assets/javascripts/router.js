@@ -1,5 +1,9 @@
 // For more information see: http://emberjs.com/guides/routing/
 
-VulnerableFront.Router.map(function() {
-  // this.resource('posts');
+Vuln.Router.map(function() {
+  this.route('stories.index', { path: '/' } );
+
+  this.resource('users', function () {
+    this.route('new');
+  });
 });
