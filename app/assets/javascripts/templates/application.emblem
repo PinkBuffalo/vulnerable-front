@@ -1,3 +1,5 @@
+= fb-status session=session
+
 h1 Vulnerable
 
 = outlet

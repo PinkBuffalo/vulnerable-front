@@ -1,5 +1,7 @@
 h2 Timeline
 
+link-to 'start' | Write yours
+
 ul
   each story in model
     li= story.body

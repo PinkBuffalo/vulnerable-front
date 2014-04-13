@@ -1,0 +1,4 @@
+if session.isConnected
+  img src=session.pic
+else
+  p Status: #{session.status}

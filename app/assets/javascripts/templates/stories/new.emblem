@@ -1,0 +1,14 @@
+h2 What's in your head?
+
+controller
+
+form submit='story.save'
+  p
+    Em.TextArea valueBinding='body'
+  p
+    button Save
+
+
+link-to 'timeline' | Keep reading
+
+outlet 'user'

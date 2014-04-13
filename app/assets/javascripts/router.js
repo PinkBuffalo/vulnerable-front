@@ -1,9 +1,11 @@
-// For more information see: http://emberjs.com/guides/routing/
-
 Vuln.Router.map(function() {
-  this.route('stories.index', { path: '/' } );
+  this.route('timeline', {path: '/'});
+  this.route('start');
 
-  this.resource('users', function () {
+  this.resource('users', {path: 'users/:user_id'}, function () {
     this.route('new');
+    this.resource('stories', function () {
+      this.route('new');
+    })
   });
 });
